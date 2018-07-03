@@ -1,0 +1,12 @@
+{
+  "name": "bitcoinjs-transaction-not-complete",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node bitcoin.js"
+  },
+  "dependencies": {
+    "bitcoinjs-lib": "^3.3.2"
+  }
+}
