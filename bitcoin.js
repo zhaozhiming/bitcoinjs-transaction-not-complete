@@ -27,9 +27,10 @@ const createSegwitTransaction = () => {
   );
   txb.addOutput('mmeVvNVHn2oJ7GZv4rQHhcDR8NLociAtXM', 100000);
   txb.addOutput('2NBPFSS1aLjE9uf2rdzQVWhBT9VHoDxKvyh', 1878100);
-  txb.sign(0, keyPair, redeemScript, null, 2000000);
 
   try {
+    txb.sign(0, keyPair, redeemScript, null, 10000);
+    txb.sign(0, keyPair, redeemScript, null, 1990000);
     txb.build();
   } catch (e) {
     console.log(e);
