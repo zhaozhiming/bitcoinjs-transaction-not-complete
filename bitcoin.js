@@ -3,7 +3,7 @@ const bitcoin = require('bitcoinjs-lib');
 const createSegwitTransaction = () => {
   const testnet = bitcoin.networks.testnet;
   const keyPair = bitcoin.ECPair.fromWIF(
-    'cPJb8Hm2FyoKe8imdeMFSa8MkyfZKAm35PrYJB4b4oJHudx7WqJU',
+    'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     testnet
   );
   const pubKey = keyPair.getPublicKeyBuffer();
@@ -30,7 +30,7 @@ const createSegwitTransaction = () => {
 
   try {
     txb.sign(0, keyPair, redeemScript, null, 10000);
-    txb.sign(0, keyPair, redeemScript, null, 1990000);
+    txb.sign(1, keyPair, redeemScript, null, 1990000);
     txb.build();
   } catch (e) {
     console.log(e);
